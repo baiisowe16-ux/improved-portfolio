@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+html {
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    
+}
+
+.logo {
+    font-size: 5rem;
+    font-weight: 800;
+    color:rgba(215, 123, 32, 0.507);
+    cursor: pointer;
+    transition: 0.5s ease;
+    margin-left: 20px;
+
+}
+
+.logo.hover {
+    transform: scale(1.1);
+
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 3rem;
+    font-weight: 800;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a:active{
+    color: rgba(215, 123, 32, 0.507);
+    border-bottom: 3px solid rgba(215, 123, 32, 0.507);
+}
+
+span{
+    color: rgba(215, 123, 32, 0.507);
+}
+
+@media (max-width: 995px) {
+    nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid rgba(215, 123, 32, 0.507);
+        border-bottom: 3px solid rgba(215, 123, 32, 0.507);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: black;
+        border-top: 0.1rem solid black;
+    }
+
+    nav .active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        margin: 3rem 0;
+        font-size: 2rem;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid rgba(215, 123, 32, 0.507);
+    }
+}
+
+section{
+   min-height: 100vh;
+   padding:5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   gap: 8rem;
+   background-color: black;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-img{
+    border-radius: 50%;
+
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid rgba(215, 123, 32, 0.507);
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+
+}
