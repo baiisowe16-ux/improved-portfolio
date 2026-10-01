@@ -70,35 +70,68 @@ span{
     color: rgba(215, 123, 32, 0.507);
 }
 
-@media (max-width: 995px) {
-    nav {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid rgba(215, 123, 32, 0.507);
-        border-bottom: 3px solid rgba(215, 123, 32, 0.507);
-        border-bottom-left-radius: 2rem;
-        padding: 1rem;
-        background-color: black;
-        border-top: 0.1rem solid black;
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
     }
 
-    nav .active {
-        display: block;
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 
     nav a {
-        display: block;
-        margin: 3rem 0;
-        font-size: 2rem;
+        font-size: 14px;
     }
 
-    nav a:hover,
-    nav a.active {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid rgba(215, 123, 32, 0.507);
+    section.home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .home-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-img img {
+        width: 70vw;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .home-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-content h3 {
+        font-size: 22px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .social-icons {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -145,4 +178,32 @@ section{
     font-size: 1.8rem;
     font-weight: 500;
 
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    position: static;
+}
+
+.social-icons span {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #b87333;
+    border-radius: 50%;
+    color: #b87333;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-icons span:hover {
+    background-color: #b87333;
+    color: white;
+    transform: translateY(-5px);
 }
